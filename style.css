@@ -1,0 +1,42 @@
+/* Sidebar Styles */
+
+.container{
+    max-height: 100vh;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #111;
+    padding-top: 20px;
+    transition: left 0.3s ease-in-out;
+}
+  
+.sidebar.active {
+    left: 0px;
+}
+  
+.close-btn {
+    display: none;
+    text-align: right;
+    padding: 10px;
+}
+  
+.sidebar.active .close-btn {
+    display: block;
+}
+  
+  /* Page Content Styles */
+.content {
+    margin-left: 0;
+    padding-left: 20px; /* Adjust padding to create space when sidebar is open */
+    transition: margin-left 0.3s ease-in-out;
+}
+  
+.sidebar.active + .content {
+    margin-left: 250px; /* Adjust margin to accommodate the open sidebar */
+}
+  
